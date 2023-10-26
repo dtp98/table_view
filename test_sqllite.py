@@ -6,27 +6,27 @@ from PySide6.QtCore import *
 import sqlite3
 import re
 
-class MyTableModel(QAbstractTableModel):
-    def __init__(self, data, headers, parent=None):
-        super().__init__(parent)
-        self._data = data
-        self._headers = headers
+# class MyTableModel(QAbstractTableModel):
+#     def __init__(self, data, headers, parent=None):
+#         super().__init__(parent)
+#         self._data = data
+#         self._headers = headers
 
-    def rowCount(self, parent=None):
-        return len(self._data)
+#     def rowCount(self, parent=None):
+#         return len(self._data)
 
-    def columnCount(self, parent=None):
-        return len(self._data[0])
+#     def columnCount(self, parent=None):
+#         return len(self._data[0])
 
-    def data(self, index, role=Qt.DisplayRole):
-        if role == Qt.DisplayRole:
-            return str(self._data[index.row()][index.column()])
-        return None
+#     def data(self, index, role=Qt.DisplayRole):
+#         if role == Qt.DisplayRole:
+#             return str(self._data[index.row()][index.column()])
+#         return None
 
-    def headerData(self, section, orientation, role=Qt.DisplayRole):
-        if role == Qt.DisplayRole and orientation == Qt.Horizontal:
-            return self._headers[section]
-        return None
+#     def headerData(self, section, orientation, role=Qt.DisplayRole):
+#         if role == Qt.DisplayRole and orientation == Qt.Horizontal:
+#             return self._headers[section]
+#         return None
 
 headers = ["","name", "city", "phone"]
 class cl_form_5(QWidget):
