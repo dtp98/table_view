@@ -65,7 +65,7 @@ layout = QHBoxLayout(widget)
 icon_label = QLabel()
 icon_label.setPixmap(icon.pixmap(24 , 24)) # Kích thước biểu tượng - thay đổi nếu cần
 label = QLabel()
-laybel.setText("da sua git")
+label.setText("da sua git")#cho nay de test git hub thoi
 label.setText(model.data(index))
 layout.addWidget(label)
 layout.addWidget(icon_label)
